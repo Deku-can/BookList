@@ -5,11 +5,11 @@ import java.util.Scanner;
 import java.util.UUID;
 
 public class BookLibrary {
-    static ArrayList<Book> books = new ArrayList<>();
-    static HashMap<UUID, Book> bookMap = new HashMap<>();
-    static Scanner scanner = new Scanner(System.in);
+     ArrayList<Book> books = new ArrayList<>();
+     HashMap<UUID, Book> bookMap = new HashMap<>();
+     Scanner scanner = new Scanner(System.in);
 
-    public static void main(String[] args) {
+      void start() {
         int choice;
         boolean isRunning = true;
 
@@ -45,7 +45,7 @@ public class BookLibrary {
         }
     }
 
-    static void newBook() {
+     void newBook() {
         System.out.println("************************");
         System.out.print("Please enter the title: ");
         String inputTitle = scanner.nextLine();
@@ -62,7 +62,7 @@ public class BookLibrary {
         System.out.println("************************");
     }
 
-    static void allList() {
+     void allList() {
         if (books.isEmpty()) {
             System.out.println("Library is empty.");
             return;
@@ -73,7 +73,7 @@ public class BookLibrary {
         }
     }
 
-    static void findBook() {
+     void findBook() {
         System.out.print("Search by: 1. UUID | 2. Title | 3. Author: ");
         int choice = scanner.nextInt();
         scanner.nextLine();
@@ -118,7 +118,7 @@ public class BookLibrary {
         }
     }
 
-    static void markAsRead() {
+     void markAsRead() {
         System.out.print("Please enter the book ID: ");
         String inputId = scanner.nextLine();
 
@@ -145,7 +145,7 @@ public class BookLibrary {
         }
     }
 
-    static void removeBook() {
+     void removeBook() {
         if (books.isEmpty()) {
             System.out.println("Library is already empty.");
             return;
